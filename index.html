@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium portfolio copy for Hongyu Zhang, focused on building practical, effective, and usable AI solutions across workflow systems, computer vision, and reinforcement learning.">
+  <title>Hongyu Zhang | AI Solution Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient-shell" aria-hidden="true">
+    <div class="ambient-orb orb-a"></div>
+    <div class="ambient-orb orb-b"></div>
+    <div class="ambient-orb orb-c"></div>
+    <div class="ambient-grid"></div>
+  </div>
+  <div class="scroll-progress" aria-hidden="true">
+    <span id="scroll-progress-bar"></span>
+  </div>
+
+  <div class="page-shell">
+    <header class="topbar interactive-panel" data-glow>
+      <a class="brand" href="#home">
+        <span class="brand-mark">HZ</span>
+        <span class="brand-copy">
+          <span class="brand-name">Hongyu Zhang</span>
+          <span class="brand-role" id="brand-role"></span>
+        </span>
+      </a>
+      <nav class="topnav" id="topnav" aria-label="Primary"></nav>
+      <div class="lang-switch" aria-label="Language switch">
+        <button class="lang-button is-active" type="button" data-lang="en">EN</button>
+        <button class="lang-button" type="button" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section-shell" id="home">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow reveal-item" data-reveal style="--reveal-delay: 0ms;" id="hero-eyebrow"></p>
+            <h1 class="hero-title reveal-item" data-reveal style="--reveal-delay: 80ms;" id="hero-title"></h1>
+            <p class="hero-typewriter reveal-item" data-reveal style="--reveal-delay: 140ms;">
+              <span class="typewriter-prefix" id="hero-typing-prefix"></span>
+              <span class="typewriter-phrase" id="hero-typing-phrase"></span>
+              <span class="typewriter-caret" id="hero-typing-caret" aria-hidden="true"></span>
+            </p>
+            <p class="hero-summary reveal-item" data-reveal style="--reveal-delay: 220ms;" id="hero-summary"></p>
+            <p class="hero-signature reveal-item" data-reveal style="--reveal-delay: 280ms;" id="hero-signature"></p>
+            <div class="hero-tags reveal-item" data-reveal style="--reveal-delay: 340ms;" id="hero-tags"></div>
+            <div class="hero-actions reveal-item" data-reveal style="--reveal-delay: 400ms;" id="hero-actions"></div>
+          </div>
+
+          <aside class="hero-stage interactive-panel reveal-item" data-glow data-reveal style="--reveal-delay: 180ms;">
+            <div class="hero-stage-topline">
+              <span class="stage-kicker" id="hero-stage-kicker"></span>
+              <span class="stage-accent-dot"></span>
+            </div>
+            <div class="hero-stage-panel">
+              <div class="hero-stage-copy">
+                <span class="micro-label" id="hero-angle-label"></span>
+                <p class="hero-angle" id="hero-angle"></p>
+              </div>
+              <div class="hero-metrics" id="hero-metrics"></div>
+            </div>
+            <div class="micro-story">
+              <span class="micro-label" id="hero-story-label"></span>
+              <p id="hero-story"></p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-shell" id="about">
+        <div class="section-heading">
+          <p class="section-index">01</p>
+          <div>
+            <h2 id="about-heading"></h2>
+            <p class="section-lead" id="about-lead"></p>
+          </div>
+        </div>
+        <div class="about-grid">
+          <div class="story-column interactive-panel" data-glow>
+            <div class="rich-copy" id="about-body"></div>
+          </div>
+          <div class="info-stack">
+            <article class="info-card interactive-panel" data-glow data-reveal>
+              <h3 id="about-education-title"></h3>
+              <div id="about-education"></div>
+            </article>
+            <article class="info-card interactive-panel" data-glow data-reveal>
+              <h3 id="about-strengths-title"></h3>
+              <ul class="bullet-list" id="about-strengths"></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell" id="skills">
+        <div class="section-heading">
+          <p class="section-index">02</p>
+          <div>
+            <h2 id="skills-heading"></h2>
+            <p class="section-lead" id="skills-lead"></p>
+          </div>
+        </div>
+        <div class="skill-grid" id="skills-grid"></div>
+      </section>
+
+      <section class="section-shell" id="projects">
+        <div class="section-heading">
+          <p class="section-index">03</p>
+          <div>
+            <h2 id="projects-heading"></h2>
+            <p class="section-lead" id="projects-lead"></p>
+          </div>
+        </div>
+        <div class="featured-projects" id="featured-projects"></div>
+        <div class="project-subsection">
+          <h3 id="supplementary-heading"></h3>
+          <div id="supplementary-projects"></div>
+        </div>
+      </section>
+
+      <section class="section-shell" id="resume">
+        <div class="section-heading">
+          <p class="section-index">04</p>
+          <div>
+            <h2 id="resume-heading"></h2>
+            <p class="section-lead" id="resume-lead"></p>
+          </div>
+        </div>
+        <div class="resume-grid">
+          <div class="resume-column">
+            <h3 id="resume-education-heading"></h3>
+            <div class="timeline" id="resume-education"></div>
+          </div>
+          <div class="resume-column">
+            <h3 id="resume-experience-heading"></h3>
+            <div class="timeline" id="resume-experience"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell" id="contact">
+        <div class="section-heading">
+          <p class="section-index">05</p>
+          <div>
+            <h2 id="contact-heading"></h2>
+            <p class="section-lead" id="contact-lead"></p>
+          </div>
+        </div>
+        <div class="contact-grid">
+          <article class="contact-card interactive-panel" data-glow data-reveal>
+            <h3 id="contact-primary-heading"></h3>
+            <div id="contact-primary"></div>
+          </article>
+          <article class="contact-card interactive-panel" data-glow data-reveal>
+            <h3 id="contact-note-heading"></h3>
+            <p id="contact-note"></p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p id="footer-text"></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
