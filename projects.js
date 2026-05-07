@@ -91,10 +91,10 @@ const pageContent = {
         title: "Switch Hunt",
         meta: "Reinforcement learning game AI | Feb 2026",
         media: {
-          src: "assets/switch-hunt-image4.png",
-          alt: "Switch Hunt training result chart",
+          src: "assets/switch-hunt-game-ui.png",
+          alt: "Switch Hunt game UI screenshot",
           frameType: "matte",
-          aspectRatio: "2083 / 1475"
+          aspectRatio: "1024 / 768"
         },
         problem: "The project explored how reinforcement learning can support adaptive, non-scripted behavior in a complex game task.",
         approach: "I built a 2D horror maze game in Pygame and trained the ghost agent with DQN in PyTorch. A curriculum-style reward design guided pursuit, retreat, baiting, sprint behavior, and risk-aware decisions.",
@@ -220,10 +220,10 @@ const pageContent = {
         title: "Switch Hunt",
         meta: "强化学习游戏 AI | 2026 年 2 月",
         media: {
-          src: "assets/switch-hunt-image4.png",
-          alt: "Switch Hunt 训练结果图",
+          src: "assets/switch-hunt-game-ui.png",
+          alt: "Switch Hunt 游戏界面截图",
           frameType: "matte",
-          aspectRatio: "2083 / 1475"
+          aspectRatio: "1024 / 768"
         },
         problem: "项目探索强化学习如何在复杂游戏任务中支持自适应、非脚本化的智能体行为。",
         approach: "我使用 Pygame 构建 2D 恐怖迷宫游戏，并在 PyTorch 中用 DQN 训练鬼的行为。奖励设计采用类似课程学习的方式，引导追击、撤退、诱导、冲刺和风险判断。",
