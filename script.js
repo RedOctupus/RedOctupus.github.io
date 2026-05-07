@@ -360,6 +360,79 @@ content.zh = {
   }
 };
 
+const lingnanCupPreview = {
+  en: {
+    title: "Lingnan Cup SRR Government AI Processing System",
+    label: "Award Project",
+    time: "Apr 25, 2026",
+    visual: "assets/lingnan-cup/award-team.jpg",
+    visualAlt: "Lingnan Cup Second Prize award photo with Hongyu Zhang's team",
+    frameType: "matte",
+    imageFit: "contain",
+    imagePosition: "center center",
+    aspectRatio: "2000 / 1362",
+    metrics: ["Second Prize", "95%+ Extraction Accuracy", "75% Efficiency Gain"],
+    details: [
+      { label: "Event", value: "The 4th Lingnan Cup China Economic Development Case Analysis Competition, Second Prize." },
+      { label: "Problem", value: "Hong Kong ASD handles more than 10,000 Slope Repair Request cases each year, with 55GB of historical documents and heavy manual workflow bottlenecks." },
+      { label: "Approach", value: "The team proposed an LLM-based intelligent document processing system with a 7-layer Agent architecture, OCR, NLP field extraction, vector search, RAG, Agentic AI, and quality-gate self-repair." },
+      { label: "Outcome", value: "The solution targets over 95% field extraction accuracy, reduces case processing from 35-55 minutes to around 10 minutes, improves efficiency by about 75%, and estimates HKD 6.39M annual labor savings." },
+      { label: "Contribution", value: "I served as project leader/contact and contributed to AI solution framing, workflow logic, technical narrative, competition report/PPT, and presentation/interview communication." }
+    ],
+    links: [{ label: "View Full Project Page", href: "projects.html" }]
+  },
+  zh: {
+    title: "岭南杯 SRR 政务 AI 处理系统",
+    label: "获奖项目",
+    time: "2026 年 4 月 25 日",
+    visual: "assets/lingnan-cup/award-team.jpg",
+    visualAlt: "张泓宇团队岭南杯二等奖领奖照片",
+    frameType: "matte",
+    imageFit: "contain",
+    imagePosition: "center center",
+    aspectRatio: "2000 / 1362",
+    metrics: ["二等奖", "95%+ 字段提取准确率", "75% 效率提升"],
+    details: [
+      { label: "赛事", value: "第四届岭南杯中国经济发展案例分析大赛，二等奖。" },
+      { label: "问题", value: "香港建筑署每年处理超过 10,000 宗斜坡维修请求，历史资料约 55GB，人工流转和文档处理存在明显效率瓶颈。" },
+      { label: "方法", value: "团队提出基于大模型的智能文档处理系统，结合 7 层 Agent 架构、OCR、NLP 字段抽取、向量检索、RAG、Agentic AI，以及质量门与自修复机制。" },
+      { label: "结果 / 价值", value: "方案目标字段提取准确率超过 95%，将单案处理时间从 35-55 分钟降至约 10 分钟，效率提升约 75%，预计每年节省人力成本约 639 万港元。" },
+      { label: "我的贡献", value: "我作为项目负责人/联系人，参与 AI 方案定位、工作流逻辑、技术叙事、比赛报告与 PPT，以及答辩和采访沟通。" }
+    ],
+    links: [{ label: "查看完整项目页", href: "projects.html" }]
+  }
+};
+
+content.en.nav = [
+  { id: "home", label: "Home", href: "#home" },
+  { id: "about", label: "About", href: "#about" },
+  { id: "skills", label: "Skills", href: "#skills" },
+  { id: "projects", label: "Projects", href: "projects.html" },
+  { id: "resume", label: "Resume", href: "#resume" },
+  { id: "contact", label: "Contact", href: "#contact" }
+];
+
+content.zh.nav = [
+  { id: "home", label: "首页", href: "#home" },
+  { id: "about", label: "关于我", href: "#about" },
+  { id: "skills", label: "技能", href: "#skills" },
+  { id: "projects", label: "项目", href: "projects.html" },
+  { id: "resume", label: "简历", href: "#resume" },
+  { id: "contact", label: "联系", href: "#contact" }
+];
+
+content.en.hero.actions[0] = { label: "Explore Projects", href: "#projects", style: "primary" };
+content.zh.hero.actions[0] = { label: "查看项目预览", href: "#projects", style: "primary" };
+
+content.en.projects.lead = "Selected work that shows how I build practical AI solutions across government workflows, AI agents, computer vision, and reinforcement learning.";
+content.zh.projects.lead = "这里展示几个代表性项目，体现我如何在政务流程、AI Agent、计算机视觉和强化学习等方向构建可用的 AI 解决方案。";
+content.en.projects.supplementaryHeading = "Additional Work";
+content.zh.projects.supplementaryHeading = "补充项目";
+content.en.projects.viewAllLabel = "View All Projects & Achievements";
+content.zh.projects.viewAllLabel = "查看全部项目与成果";
+content.en.projects.featured = [lingnanCupPreview.en, ...content.en.projects.featured];
+content.zh.projects.featured = [lingnanCupPreview.zh, ...content.zh.projects.featured];
+
 function getInitialLang() {
   const urlLang = new URLSearchParams(window.location.search).get("lang");
   const savedLang = window.localStorage.getItem("premium-site-lang");
@@ -408,6 +481,7 @@ const els = {
   featuredProjects: document.getElementById("featured-projects"),
   supplementaryHeading: document.getElementById("supplementary-heading"),
   supplementaryProjects: document.getElementById("supplementary-projects"),
+  projectPageCta: document.getElementById("project-page-cta"),
   resumeHeading: document.getElementById("resume-heading"),
   resumeLead: document.getElementById("resume-lead"),
   resumeEducationHeading: document.getElementById("resume-education-heading"),
@@ -425,7 +499,11 @@ const els = {
 };
 
 function renderNav(lang) {
-  els.topnav.innerHTML = content[lang].nav.map((item) => `<a class="nav-link" href="#${item.id}">${item.label}</a>`).join("");
+  els.topnav.innerHTML = content[lang].nav.map((item) => {
+    const href = item.href || `#${item.id}`;
+    const current = href === "projects.html" && window.location.pathname.endsWith("/projects.html") ? ' aria-current="page"' : "";
+    return `<a class="nav-link" href="${href}"${current}>${item.label}</a>`;
+  }).join("");
 }
 
 function renderHero(lang) {
@@ -497,7 +575,11 @@ function buildProjectList(details) {
 
 function buildProjectLinks(links) {
   if (!links.length) return "";
-  return `<div class="project-links">${links.map((link) => `<a class="project-link" href="${link.href}" target="_blank" rel="noreferrer">${link.label}</a>`).join("")}</div>`;
+  return `<div class="project-links">${links.map((link) => {
+    const isExternal = /^https?:\/\//.test(link.href);
+    const target = isExternal ? ' target="_blank" rel="noreferrer"' : "";
+    return `<a class="project-link" href="${link.href}"${target}>${link.label}</a>`;
+  }).join("")}</div>`;
 }
 
 function buildProjectCard(project, index, className) {
@@ -529,6 +611,9 @@ function renderProjects(lang) {
   els.supplementaryHeading.textContent = projects.supplementaryHeading;
   els.featuredProjects.innerHTML = projects.featured.map((project, index) => buildProjectCard(project, index, "project-card")).join("");
   els.supplementaryProjects.innerHTML = projects.supplementary.map((project, index) => buildProjectCard(project, index, "supplementary-card")).join("");
+  if (els.projectPageCta) {
+    els.projectPageCta.innerHTML = `<a class="button-link primary" href="projects.html">${projects.viewAllLabel}</a>`;
+  }
 }
 
 function renderTimeline(target, items) {
@@ -652,12 +737,13 @@ function setupNavObserver() {
   if (state.navObserver) state.navObserver.disconnect();
 
   const navLinks = [...document.querySelectorAll(".nav-link")];
-  const sections = navLinks.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+  const sectionLinks = navLinks.filter((link) => link.getAttribute("href").startsWith("#"));
+  const sections = sectionLinks.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
 
   state.navObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      navLinks.forEach((link) => {
+      sectionLinks.forEach((link) => {
         link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
       });
     });
