@@ -43,13 +43,13 @@ content.en = {
     heading: "About Me",
     lead: "I am building toward work where AI capability must become a usable solution, not just a technical demo.",
     body: [
-      "I am currently pursuing an MSc in Artificial Intelligence and Data Analytics at Lingnan University, after completing a cross-disciplinary undergraduate path in markets and global business. That combination shaped the way I approach AI work: I care about both technical performance and the practical system around it.",
+      "I am currently pursuing an MSc in Artificial Intelligence and Business Analytics at Lingnan University, after completing a cross-disciplinary undergraduate path in markets and global business. That combination shaped the way I approach AI work: I care about both technical performance and the practical system around it.",
       "Across coursework and industry work at Beeinventor Limited, I have worked on AI solutions, computer vision systems, workflow design, demos, and technical delivery. I am especially interested in the step between model capability and real usage: how a system is structured, explained, and made reliable enough for people to actually use.",
       "What defines me most is not one specific AI subfield, but my interest in building AI systems that are practical, structured, and genuinely usable."
     ],
     educationTitle: "Education",
     education: [
-      "Lingnan University, Hong Kong - MSc in Artificial Intelligence and Data Analytics, expected Jul 2026.",
+      "Lingnan University, Hong Kong - MSc in Artificial Intelligence and Business Analytics, expected Jul 2026.",
       "Hong Kong Metropolitan University, Hong Kong - Bachelor of Markets and Global Business, Sep 2021 to Jun 2023."
     ],
     strengthsTitle: "Strengths & Focus Areas",
@@ -158,7 +158,7 @@ content.en = {
     educationHeading: "Education",
     experienceHeading: "Experience",
     education: [
-      { meta: "Jul 2026 (Expected)", title: "Lingnan University", summary: "Master of Science in Artificial Intelligence and Data Analytics. Core modules include Machine Learning, Data Mining, Natural Language Processing, Big Data Technologies, and Statistical Modeling." },
+      { meta: "Jul 2026 (Expected)", title: "Lingnan University", summary: "Master of Science in Artificial Intelligence and Business Analytics. Core modules include Machine Learning, Data Mining, Natural Language Processing, Big Data Technologies, and Statistical Modeling." },
       { meta: "Sep 2021 - Jun 2023", title: "Hong Kong Metropolitan University", summary: "Bachelor of Markets and Global Business with coursework in Business Intelligence, Data Analysis, Digital Marketing, and Consumer Behavior." }
     ],
     experience: [
